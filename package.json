@@ -1,0 +1,53 @@
+{
+  "name": "tinymce-bento-grid",
+  "version": "1.0.0",
+  "description": "Zero-dependency Bento Grid block plugin for TinyMCE 6 & 7 with responsive mobile/desktop CSS and RTL support.",
+  "keywords": [
+    "tinymce",
+    "tinymce-plugin",
+    "bento-grid",
+    "rich-text-editor",
+    "responsive",
+    "rtl"
+  ],
+  "license": "MIT",
+  "author": "Alireza Askari",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alirezawaskari/tinymce-bento-grid.git"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./src/bento-grid.css"
+  },
+  "files": [
+    "dist",
+    "src/bento-grid.css",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && node scripts/build-cjs.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "tinymce": ">=6.0.0 <8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "tinymce": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
